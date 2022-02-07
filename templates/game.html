@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block main %}
+{% if not g.user %}
+<p>Please sign in if you want to be added to leaderboard.</p>
+{% endif %}
+<section>
+    <img src='{{url_for("static", filename="images/coin.png")}}'>
+    <p id='coins'></p>
+    <img src='{{url_for("static", filename="images/heart.png")}}'>
+    <p id='health'></p>
+    <p id='time'></p>
+</section>
+<p id='message'></p>
+<p id='warning'></p>
+
+
+<canvas id='screen'>
+
+</canvas>
+
+    <p id='level'></p>
+
+<div id="retry">
+
+
+{% endblock %}

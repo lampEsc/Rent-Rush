@@ -1,0 +1,223 @@
+/* The Root */
+
+:root{
+    --mainbackground: #08a810be;
+    --mainheaderbackground: #007a2f;
+    --maintextcolor: #e5fc4c;
+    --mainheadingtext: #000000; 
+    --mainborder: #fed03a;
+    --othertext: #ffffff;
+    --otherbackgrounds: #f1eee3;
+    --otherborder: #ffffff;
+
+    color: var(--maintextcolor);
+    background-color: var(--mainbackground);
+
+    font-size: large;
+    font-family: Helvetica, Arial, sans-serif;
+    display: block;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+
+    margin: 0;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    justify-items: center;
+    align-content: center;    
+
+    margin: 0;
+
+    background-color: var(--mainheaderbackground);
+}
+
+header img {
+    grid-column-start: 2;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-self: bottom;
+    align-items: center;
+}
+
+nav a{
+    padding: 20px;
+
+    color: var(--maintextcolor);
+}
+
+nav a~a{
+    padding-top: 0px;
+
+}
+
+nav a~p{
+    margin-top: 0;
+
+}
+
+main, #retry{
+    display: flex;
+    flex-direction: column;
+
+    align-content: center;
+
+    text-align: center;
+    image-rendering: pixelated;
+
+
+    margin-top: 25px;
+}
+
+
+main #house, main #house2 {
+
+    align-self: center;
+    min-width: 640px;
+    min-height: 680px;
+    
+    image-rendering: pixelated;
+
+    background-image: url('images/Overworld.png');
+    background-repeat: no-repeat;
+    background-position: -750px 1px;
+    background-size: 5000px 5000px;
+
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+}
+
+main #house p, main #house2 p{
+    align-self: center;
+
+    image-rendering: pixelated;
+    max-width: 124px;
+    min-height: 188px;
+
+    margin-top: 488px;
+
+    background-image: url('images/Overworld.png');
+    background-repeat: no-repeat;
+    background-position: -2007px -627px;
+    background-size: 5000px 5000px;
+
+    display: grid;
+    grid-template-rows: 60px 50px 60px;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+}
+
+section~section {
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 25px;
+    padding-bottom: 25px;
+
+    background-color: var(--mainheaderbackground);
+}
+
+h1 {
+    font-size: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+}
+
+h2 {
+    font-size: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+}
+
+canvas {
+    width:512px; 
+    height:320px;
+
+    align-self: center;
+
+    background-color: var(--mainborder);
+
+    margin-top: 0.5em;
+    
+    border: solid;
+    border-color: var(--mainborder);
+}
+
+img {
+    padding: 20px;
+    max-width: 500px;
+    min-width: 30px;
+
+    align-self: center;
+    image-rendering: pixelated;
+
+}
+
+section img  {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+img~p {
+    padding-right: 2.5em;
+}
+
+p {
+    margin: 10px;
+}
+
+table {
+    min-width: 500px;
+
+}
+
+caption {
+    margin-bottom: 10px;
+
+    
+    font-size: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+}
+
+th {
+    padding: 1em;
+}
+
+td {
+    padding: 0.5em;
+}
+
+tbody {
+    background-color: var(--mainheaderbackground);
+}
+
+a {
+    grid-row: 2;
+    color: var(--othertext);
+}
+
+ul {
+    text-align: left;
+    align-self: center;
+    padding-left: 100px;
+    max-width: 700px;
+}
+
+footer {    
+    margin-top: 70px;
+
+    text-align: center;
+    height: 0;
+}

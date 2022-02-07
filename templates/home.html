@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block main %}
+<h1>Completely accurate rent paying simulation.</h1>
+
+<section id='house'>
+    <p>
+    <a href="{{ url_for('game')}}">Click here to play.</a>
+    </p>
+</section>
+
+<section>
+    <h1>Controls:</h1>
+    <p>Arrow keys to move character, space to attack.</p>
+    <h1>Objective:</h1>
+    <p>Collect coins in the time remaining by killing skeletons in order to pay your rent.</p> 
+    <p><b>Please Log In to be entered into leaderboards.</b></p>
+</section>
+
+<h2>Please read terms of lease listed below.</h2>
+
+<ul>
+    <li>Collect enough coins to pay the rent for your house.</li>
+    <li>Every time you complete a level you will be deducted a higher number of coins.</li>
+    <li>Days and the amount of spawning skeletons per map section are proportional.</li>
+    <li>One skeleton is equal to one coin.</li>
+    <li>Clicking to begin will sign your lease contract and throw you into a field containing infinitely spawning skeletons.</li>
+    <li>You will have 1 and a half minutes to collect enough coins to pay your rent each day.</li>
+    <li>Losing your hearts or failure to pay the rent will result in a Game Over.</li>
+    <li>Arrow keys to move and Space Bar is to attack.</li>
+</ul>
+
+{% endblock %}

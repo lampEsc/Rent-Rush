@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block main %}
+
+<section>
+
+    <table>
+        <caption>{{ caption }}</caption>
+            <tr>
+                <th>
+                    Player
+                </th>
+                <th>
+                    Days
+                </th>
+                <th>
+                    Coins
+                </th>
+                <th>
+                    Achieved
+                </th>
+            </tr>
+        {% for user in users %}
+            <tr>
+                <td> {{ user['name'] }}</td>
+                <td> {{ user['score'] }}</td>
+                <td> {{ user['coins'] }}</td>
+                <td> {{ user['date'] }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+</section>
+
+{% endblock %}

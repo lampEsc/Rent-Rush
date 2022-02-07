@@ -1,0 +1,12 @@
+DROP TABLE IF EXISTS users;
+
+CREATE TABLE users 
+(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    password VARCHAR NOT NULL,
+    name VARCHAR NOT NULL,
+    score INT NO NULL,
+    coins INT NO NULL,
+    date VARCHAR NO NULL
+
+);

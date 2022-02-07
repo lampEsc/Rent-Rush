@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+
+{% block main %}
+
+<table>
+    
+    <tr>
+        <td>
+            <h1>Register:</h1>
+        </td>
+
+        <td>
+            <h1>Login:</h1>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <form action='' method='POST' novalidate>
+
+                {{ rform.hidden_tag() }}
+                {{ rform.user_id.label }}
+                {{ rform.user_id() }}
+                <br/>
+
+                {% for error in rform.user_id.errors %}
+                    {{ error }}
+                {% endfor %}
+                <br>
+
+                {{ rform.password1.label }}
+                {{ rform.password1() }}
+                <br/>
+
+                {% for error in rform.password1.errors %}
+                    {{ error }}
+                {% endfor %}
+                <br>
+
+                {{ rform.password2.label }}
+                {{ rform.password2() }}
+                <br/>
+
+                {% for error in rform.password2.errors %}
+                    {{ error }}
+                {% endfor %}
+                <br>
+
+                {{ rform.submit2() }}
+
+            </form>
+
+            <p>
+                {{ response }}
+            </p>
+        </td>
+
+        <td>
+            <form action='' method='POST' novalidate>
+
+                {{ lform.hidden_tag() }}
+                {{ lform.user_id.label }}
+                {{ lform.user_id() }}
+                <br/>
+
+                {% for error in lform.user_id.errors %}
+                    {{ error }}
+                {% endfor %}
+                <br>
+
+                {{ lform.password1.label }}
+                {{ lform.password1() }}
+                <br/>
+
+                {% for error in lform.password1.errors %}
+                    {{ error }}
+                {% endfor %}
+                <br>
+
+                {{ lform.submit() }}
+
+            </form>
+
+        </td>
+    </tr>
+
+</table>
+
+{% endblock %}

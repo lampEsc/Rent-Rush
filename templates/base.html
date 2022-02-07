@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset='utf-8'/>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+        <title>{{ title }}</title> 
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+        <script src="{{ url_for('static', filename='game.js') }}" type='module'></script>
+    </head>
+
+    <body>
+        <header>     
+
+            <nav>
+                <a href="{{url_for('welcome')}}">Home</a>
+                {% if not g.user %}
+                <a href="{{url_for('user')}}">Register / Login</a>
+                {% endif %}
+
+                {% if g.user %}
+                <a href="{{url_for('logout')}}">Logout</a>
+                {% endif %}
+            </nav>
+
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt='Rent Rush'/>
+
+            <nav>
+                {% if g.user %}
+                <a href="{{url_for('leaderboard')}}">Leaderboards</a>
+                <p>{{ g.user }}</p>
+                {% endif %}
+            </nav>
+
+        </header>
+
+
+        <main>
+            {% block main  %}
+            {% endblock %}
+        </main>
+
+        <footer>
+            <small>
+                Eoin Schuch, Web Dev, CA2, 2021.
+            </small>
+        </footer>
+
+    </body>
+
+</html>
